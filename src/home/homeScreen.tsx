@@ -5,8 +5,7 @@ import { useQuery } from 'react-query';
 
 import { ProfileList } from './profileList';
 
-export const HomeScreen = () => {
-
+export const HomeScreen = ({ navigation : { navigate } }) => {
     const [search, setSearch] = useState<string>('');
     const [newSearch, setNewSearch] = useState<string>('');
     
@@ -17,14 +16,13 @@ export const HomeScreen = () => {
 
     if (isLoading) return <Container style={{ alignItems: 'center', justifyContent: 'center' }}><Text> Loading... </Text></Container>
 
-    if (error) return console.log(error)
+    if (error){ console.log(error) }
 
     const heandleSearch = () => {
         setNewSearch(search);
     }
 
     return(
-    <>
         <Container>
             <TextInput
                 label="Username"
@@ -43,9 +41,8 @@ export const HomeScreen = () => {
 
             <Divider />
 
-            <ProfileList data={ data } />
+            <ProfileList data={ data } navigate={ navigate }/>
 
         </Container>
-    </>
     )
 }

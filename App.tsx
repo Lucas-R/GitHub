@@ -8,6 +8,7 @@ import { activateKeepAwake } from 'expo-keep-awake';
 
 import { theme } from './theme';
 import { HomeScreen } from './src/home/homeScreen';
+import { ProfileScreen } from './src/profile/profileScreen';
 
 const Stack = createNativeStackNavigator();
 
@@ -24,10 +25,17 @@ export default function App() {
         <NavigationContainer theme={ theme }>
             <Stack.Navigator>
               <Stack.Screen
-                name="Home" 
+                name="HomeScreen" 
                 component={HomeScreen} 
                 options={{
                   title: " Home Page "
+                }}
+              />
+               <Stack.Screen
+                name="ProfileScreen" 
+                component={ProfileScreen} 
+                options={{
+                  title: " Profile Page "
                 }}
               />
             </Stack.Navigator>
