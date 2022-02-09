@@ -8,7 +8,7 @@ import { ProfileList } from './profileList';
 export const HomeScreen = ({ navigation : { navigate } }) => {
     const [search, setSearch] = useState<string>('');
     const [newSearch, setNewSearch] = useState<string>('');
-    
+
     const {isLoading, error, data} = useQuery(newSearch, () =>
         fetch('https://api.github.com/search/users?q=' + search)
         .then(res => res.json())

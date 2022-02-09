@@ -9,6 +9,8 @@ import { activateKeepAwake } from 'expo-keep-awake';
 import { theme } from './theme';
 import { HomeScreen } from './src/home/homeScreen';
 import { ProfileScreen } from './src/profile/profileScreen';
+import { ReposScreen } from './src/repos/reposScreen';
+import { FollowersScreen } from './src/followers/followersScreen';
 
 const Stack = createNativeStackNavigator();
 
@@ -36,6 +38,20 @@ export default function App() {
                 component={ProfileScreen} 
                 options={{
                   title: " Profile Page "
+                }}
+              />
+              <Stack.Screen
+                name="ReposScreen" 
+                component={ReposScreen} 
+                options={{
+                  title: "Repos Page "
+                }}
+              />
+              <Stack.Screen
+                name="FollowersScreen" 
+                component={FollowersScreen} 
+                options={{
+                  title: "Followers Page "
                 }}
               />
             </Stack.Navigator>

@@ -1,7 +1,6 @@
 import React from 'react';
 import { View, FlatList } from 'react-native';
 import { List, Avatar, Text } from 'react-native-paper';
-import { ProfileScreen } from '../profile/profileScreen';
 
 export const ProfileList = ({ data, navigate }) => {
 

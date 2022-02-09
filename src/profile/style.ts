@@ -15,24 +15,37 @@ export const Body = styled.View`
     margin-bottom: 32px;
 `;
 
+export const Footer = styled.View`
+    margin-bottom: 32px;
+`;
+
 export const Divider = styled.View`
     height: 16px;
 `;
 
 export const styles = StyleSheet.create({
-    userAvatar: {        
+    title:{
+        width: '100%',
+        fontSize: 24,
+        fontWeight: 'bold',
     },
     userName: {
         fontSize: 32,
         fontWeight: 'bold',
         marginBottom: 16
     },
-    userDetailsTitle:{
-        fontSize: 24,
-        fontWeight: 'bold',
-    },
     userDetails:{
-        fontSize: 18,
-        lineHeight: 26
-    }
+        fontSize: 24,
+        lineHeight: 30,
+        marginBottom: 8,
+
+    },
+    userDetailsListItem:{
+        paddingVertical: 0,
+    },
+    userDetailsIcon:{
+        marginVertical: 0,
+        marginHorizontal: 0
+
+    },
 });
